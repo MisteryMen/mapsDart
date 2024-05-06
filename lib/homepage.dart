@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviles/guardados.dart';
 import 'Novedades.dart'; // Importa la clase Novedades
 
 void main() {
@@ -176,6 +177,9 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
           onTap: (int index) {
+            if(index == 2){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => guardados()));
+            }
             // Verifica si se ha seleccionado el ítem "Novedades"
             if (index == 4) {
               // Navega a la pantalla de Novedades
